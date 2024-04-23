@@ -1,0 +1,3 @@
+# VIM configuration
+
+## Plugin list
