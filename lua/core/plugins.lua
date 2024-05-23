@@ -29,7 +29,7 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"nvimtools/none-ls.nvim",
-
+	"tpope/vim-commentary",
 	-- {
 	-- "vinnymeller/swagger-preview.nvim",
 	-- run = "npm install -g swagger-ui-watcher",
