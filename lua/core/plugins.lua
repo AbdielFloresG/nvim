@@ -30,6 +30,7 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"nvimtools/none-ls.nvim",
 	"tpope/vim-commentary",
+	"brenoprata10/nvim-highlight-colors",
 	-- {
 	-- "vinnymeller/swagger-preview.nvim",
 	-- run = "npm install -g swagger-ui-watcher",

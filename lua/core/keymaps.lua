@@ -27,7 +27,7 @@ vim.keymap.set("v", "<leader>y", '"+y')
 -- GIT
 
 -- vim.keymap.set("n", "<C-p>", ":GFiles<CR>")
-vim.keymap.set("n", "<leader>pf", ":GFiles<CR>")
+-- vim.keymap.set("n", "<leader>pf", ":GFiles<CR>")
 vim.keymap.set("n", "<C-j>", ":cnext")
 vim.keymap.set("n", "<C-k>", ":cprev")
 
