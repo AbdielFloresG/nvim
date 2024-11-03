@@ -1,15 +1,23 @@
 return {
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	lazy = false,
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			flavour = "mocha",
+	-- 			transparent_background = true,
+	-- 		})
+	-- 		vim.cmd.colorscheme("catppuccin-mocha")
+	-- 	end,
+	-- },
 	{
-		"catppuccin/nvim",
+		"morhetz/gruvbox",
 		lazy = false,
-		name = "catppuccin",
-		priority = 1000,
+		name = "gruvbox",
 		config = function()
-			require("catppuccin").setup({
-				flavour = "mocha",
-				transparent_background = true,
-			})
-			vim.cmd.colorscheme("catppuccin-mocha")
+			vim.cmd("colorscheme gruvbox")
 		end,
 	},
 }
