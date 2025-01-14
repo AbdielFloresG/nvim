@@ -11,7 +11,6 @@ return {
 			},
 			view = {
 				side = "right",
-				width = 35,
 			},
 		})
 
