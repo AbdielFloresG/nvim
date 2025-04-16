@@ -5,7 +5,7 @@ return {
 			require("lualine").setup({
 				options = {
 					icons_enabled = true,
-					theme = "gruvbox",
+					theme = "auto",
 				},
 				sections = {
 					lualine_a = {
