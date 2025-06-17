@@ -5,8 +5,22 @@ return {
     opts = {
       auto_install = true,
     },
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+    },
     config = function()
-      require("mason").setup({
+      --import mason
+
+      local mason = require("mason")
+
+      -- import mason-lspconfig
+      local mason_lspconfig = require("mason-lspconfig")
+
+      -- import mason-tool-installer
+      local mason_tool_installer = require("mason-tool-installer")
+
+      mason.setup({
         ensure_installed = {
           "prettier",
           "eslint_d",
@@ -19,23 +33,17 @@ return {
           "phpactor",
         },
       })
-    end,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    opts = {
-      auto_install = true,
-    },
-    config = function()
-      require("mason-lspconfig").setup({
+
+      mason_lspconfig.setup({
         ensure_installed = {
           "tailwindcss",
           "ts_ls",
           "html",
+          "cssls",
           "lua_ls",
           "gopls",
           "astro",
+          "dockerls",
         },
       })
     end,
@@ -136,6 +144,10 @@ return {
         capabilities = capabilities,
         filetypes = { "php" },
         root_dir = lspconfig.util.root_pattern("composer.json", ".git"),
+      })
+
+      lspconfig.dockerls.setup({
+        capabilities = capabilities,
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
